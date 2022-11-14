@@ -1,0 +1,22 @@
+{
+  "name": "realtimebustracking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mapanimation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madetrudeau/realtimebustracking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madetrudeau/realtimebustracking/issues"
+  },
+  "homepage": "https://github.com/madetrudeau/realtimebustracking#readme",
+  "dependencies": {
+    "txt-file-to-json": "^3.0.6"
+  }
+}
