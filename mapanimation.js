@@ -1,4 +1,4 @@
-const appID = 
+const appID = process.env.MAPBOX_API_KEY
 const fs = require('fs').promises;
 
 
