@@ -1,13 +1,16 @@
-const appID = process.env.MAPBOX_API_KEY
-const fs = require('fs').promises;
+const appID = "7CBB98B4AE7C7662E47CCD101";
+console.log(appID);
+//const fs = require('fs').promises;
 
 
 async function run(){
     const vehicleLocation = await getVehiclesCurrentLocation();
     const stopInformation    = await getStopInfo('./gtfs/stops.txt');
     console.log(new Date());
-    console.log(vehicleLocation);
-    console.log(stopInformation);
+    console.log("Latitude: " + vehicleLocation.vehicle[0].latitude);
+    console.log("Longitude: " + vehicleLocation.vehicle[0].longitude);
+    //console.log(stopInformation);
+    //console.log(resultSet)
 
     //Timer
     setTimeout(run, 15000);

@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/madetrudeau/realtimebustracking#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
+    "node": "^19.2.0",
     "txt-file-to-json": "^3.0.6"
   }
 }
