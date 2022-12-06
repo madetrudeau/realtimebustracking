@@ -23,6 +23,7 @@ function createMapMarker() {
   }
   
   window.onload = () => {
+    console.log("Window Loaded")
     createMapMarker();
   };
 
