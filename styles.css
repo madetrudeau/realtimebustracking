@@ -59,6 +59,17 @@ p {
        
 }
 
+h2 {
+    margin-top: 5px;
+    margin-left: 13%;
+    margin-right: auto;
+    font-family: montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18pt;
+    color: #50571B;
+}
+
 .eyebox {
     margin: 0;
     padding: 0;
