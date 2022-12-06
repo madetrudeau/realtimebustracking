@@ -10,16 +10,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzb
     center: [-74.5, 40], // starting position [lng, lat]
     zoom: 9, // starting zoom
 }); */
+let map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [long, lat],
+    zoom: 13,
+  });
+
 
 function createMapMarker(long,lat) {
-    console.log("Longitude: " + long);
-    let map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [long, lat],
-      zoom: 13,
-    });
-  
     let marker = new mapboxgl.Marker().setLngLat([long, lat]).addTo(map);
   }
   
