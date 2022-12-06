@@ -14,19 +14,20 @@ let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [-122.623839, 45.524109],
-    zoom: 13,
+    zoom: 9,
   });
 
 
 function createMapMarker(long,lat) {
     let marker = new mapboxgl.Marker().setLngLat([long, lat]).addTo(map);
     map.center = [long, lat];
+    map.zoom = 13;
   }
   
-  window.onload = () => {
+/*   window.onload = () => {
     console.log("Window Loaded")
     createMapMarker();
-  };
+  }; */
 
 
 async function run(){
