@@ -68,8 +68,7 @@ p {
   #map { 
     position: absolute; 
     top: 300px; 
-    bottom: 0; 
-    right: auto;
-    left: auto;
+    bottom: 50px; 
+    margin-left: 250px;
     width: 75%;
   }
