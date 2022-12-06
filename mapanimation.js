@@ -17,7 +17,7 @@ function createMapMarker(long,lat) {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [long, lat],
-      zoom: 12,
+      zoom: 13,
     });
   
     let marker = new mapboxgl.Marker().setLngLat([long, lat]).addTo(map);
