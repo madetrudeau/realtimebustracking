@@ -23,15 +23,21 @@ function createMapMarker(long,lat) {
 
   }
   
+function updateMapMarker(long, lat) {
+    map.setCenter([long,lat]);
+    marker = marker.mapboxgl.Marker().setLngLat([long,lat]).addTo(map);
+}
+  
   window.onload = () => {
     console.log("Window Loaded")
     createMapMarker();
   };
 
 
-async function run(){
-    const vehicleLocation = await getVehiclesCurrentLocation();
-    createMapMarker(vehicleLocation.vehicle[0].longitude, vehicleLocation.vehicle[0].latitude);
+async function run(long, lat){
+    //const vehicleLocation = await getVehiclesCurrentLocation();
+    updateMapMarker(long, lat);
+    //createMapMarker(vehicleLocation.vehicle[0].longitude, vehicleLocation.vehicle[0].latitude);
     //const stopInformation    = await getStopInfo('./gtfs/stops.txt');
     //console.log(new Date());
     //console.log("Latitude: " + vehicleLocation.vehicle[0].latitude);
@@ -80,4 +86,6 @@ async function getVehiclesCurrentLocation(){
 window.onload = () => {
     createMapMarker();
   };
-run();
+const vehicleLocation = await getVehiclesCurrentLocation();
+createMapMarker(vehicleLocation.vehicle[0].longitude, vehicleLocation.vehicle[0].latitude)
+run(vehicleLocation);
