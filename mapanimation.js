@@ -33,9 +33,9 @@ async function run(){
     const vehicleLocation = await getVehiclesCurrentLocation();
     createMapMarker(vehicleLocation.vehicle[0].longitude, vehicleLocation.vehicle[0].latitude);
     //const stopInformation    = await getStopInfo('./gtfs/stops.txt');
-    console.log(new Date());
-    console.log("Latitude: " + vehicleLocation.vehicle[0].latitude);
-    console.log("Longitude: " + vehicleLocation.vehicle[0].longitude);
+    //console.log(new Date());
+    //console.log("Latitude: " + vehicleLocation.vehicle[0].latitude);
+    //console.log("Longitude: " + vehicleLocation.vehicle[0].longitude);
     //console.log(stopInformation);
     //console.log(resultSet)
 
