@@ -11,16 +11,16 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzb
     zoom: 9, // starting zoom
 }); */
 
-function createMapMarker(lat,long) {
+function createMapMarker(long,lat) {
 
     let map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [-71.091542, 42.358862],
+      center: [long, lat],
       zoom: 9,
     });
   
-    let marker = new mapboxgl.Marker().setLngLat([-71.091542, 42.358862]).addTo(map);
+    let marker = new mapboxgl.Marker().setLngLat([long, lat]).addTo(map);
   }
   
   window.onload = () => {
@@ -31,7 +31,7 @@ function createMapMarker(lat,long) {
 
 async function run(){
     const vehicleLocation = await getVehiclesCurrentLocation();
-    createMapMarker(vehicleLocation.vehicle[0].latitude, vehicleLocation.vehicle[0].longitude);
+    createMapMarker(vehicleLocation.vehicle[0].longitude, vehicleLocation.vehicle[0].latitude);
     //const stopInformation    = await getStopInfo('./gtfs/stops.txt');
     console.log(new Date());
     console.log("Latitude: " + vehicleLocation.vehicle[0].latitude);
