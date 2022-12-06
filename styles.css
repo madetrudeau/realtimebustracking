@@ -63,47 +63,9 @@ p {
     color: #14495e;
   }
   
-.eyes {
-    position: absolute;
-    top: 75%;
-    transform: translateY(-50%);
+  #map { 
+    position: absolute; 
+    top: 300px; 
+    bottom: 0; 
     width: 75%;
-    text-align: center;
-}
-
-  .leftEye {
-    width: 240px;
-    height: 120px;
-    background: #fff;
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid black;
-    display: inline-block;
-    top: 50%;
-    left: 33%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-  }
-  .rightEye {
-    width: 240px;
-    height: 120px;
-    background: #fff;
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid black;
-    display: inline-block;
-    top: 50%;
-    left: 66%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-  }
-  .ball {
-    width: 80px;
-    height: 80px;
-    background: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
   }
