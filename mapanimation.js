@@ -12,12 +12,12 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzb
 }); */
 
 function createMapMarker(long,lat) {
-
+    console.log("Longitude: " + long);
     let map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [long, lat],
-      zoom: 9,
+      zoom: 12,
     });
   
     let marker = new mapboxgl.Marker().setLngLat([long, lat]).addTo(map);

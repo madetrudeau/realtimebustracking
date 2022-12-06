@@ -69,6 +69,6 @@ p {
     position: absolute; 
     top: 300px; 
     bottom: 50px; 
-    margin-left: 250px;
+    margin-left: 0;
     width: 75%;
   }
