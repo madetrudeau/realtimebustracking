@@ -1,5 +1,6 @@
 const appID = "7CBB98B4AE7C7662E47CCD101";
 console.log(appID);
+const map = document.getElementById(map);
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzbm83d24weWdreXgifQ.zTvKoTNLxZjjp5opM3ei2Q';
 
@@ -13,7 +14,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzb
 function createMapMarker() {
 
     let map = new mapboxgl.Map({
-      container: document.getElementById(map),
+      container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-71.091542, 42.358862],
       zoom: 12,
