@@ -1,6 +1,6 @@
 const appID = "7CBB98B4AE7C7662E47CCD101";
 console.log(appID);
-//let map = document.getElementById(map);
+
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzbm83d24weWdreXgifQ.zTvKoTNLxZjjp5opM3ei2Q';
 
