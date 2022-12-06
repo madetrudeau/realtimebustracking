@@ -3,14 +3,28 @@ console.log(appID);
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZzF6dDA0NzQzdm56NTBqNDh3NWcifQ.TQjT-zcWNqgaImMMZRNjAQ';
 
-const map = new mapboxgl.Map({
+/* const map = new mapboxgl.Map({
     container: 'content', // container ID
     style: 'mapbox://styles/mapbox/streets-v12', // style URL
     center: [-74.5, 40], // starting position [lng, lat]
     zoom: 9, // starting zoom
-});
+}); */
 
+function createMapMarker() {
 
+    let map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-71.091542, 42.358862],
+      zoom: 12,
+    });
+  
+    let marker = new mapboxgl.Marker().setLngLat([-71.091542, 42.358862]).addTo(map);
+  }
+  
+  window.onload = () => {
+    createMapMarker();
+  };
 
 
 async function run(){
@@ -60,5 +74,7 @@ async function getStopInfo(filename){
 }
 
 
-
+window.onload = () => {
+    createMapMarker();
+  };
 run();
