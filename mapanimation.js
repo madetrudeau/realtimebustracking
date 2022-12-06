@@ -1,5 +1,5 @@
 const appID = "7CBB98B4AE7C7662E47CCD101";
-let vehicleLoc = []; 
+//let vehicleLoc = []; 
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzbm83d24weWdreXgifQ.zTvKoTNLxZjjp5opM3ei2Q';
@@ -32,7 +32,7 @@ function createMapMarker(long,lat) {
 
 async function run(){
     const vehicleLocation = await getVehiclesCurrentLocation();
-    vehicleLoc = [vehicleLocation.vehicle[0].longitude, vehicleLocation.vehicle[0].latitude)]
+    vehicleLoc = [vehicleLocation.vehicle[0].longitude, vehicleLocation.vehicle[0].latitude]
     createMapMarker(vehicleLoc[0],vehicleLoc[1]);
     //const stopInformation    = await getStopInfo('./gtfs/stops.txt');
     //console.log(new Date());
