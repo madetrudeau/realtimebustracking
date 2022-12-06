@@ -44,7 +44,7 @@ async function run(){
     
     //const stopInformation    = await getStopInfo('./gtfs/stops.txt');
     //console.log(new Date());
-    //console.log("Latitude: " + vehicleLocation.vehicle[0].latitude);
+    console.log(vehicleLocation);
     //console.log("Longitude: " + vehicleLocation.vehicle[0].longitude);
     //console.log(stopInformation);
     //console.log(resultSet)
