@@ -1,5 +1,5 @@
 const appID = "7CBB98B4AE7C7662E47CCD101";
-console.log(appID);
+let vehicleLoc = []; 
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzbm83d24weWdreXgifQ.zTvKoTNLxZjjp5opM3ei2Q';
@@ -11,15 +11,17 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzb
     zoom: 9, // starting zoom
 }); */
 
+let map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-122.623839, 45.524109],
+    zoom: 13,
+  });
+
 function createMapMarker(long,lat) {
-    let map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [long, lat],
-      zoom: 13,
-    });
-  
+    map.setCenter([long,lat]);
     let marker = new mapboxgl.Marker().setLngLat([long, lat]).addTo(map);
+
   }
   
   window.onload = () => {
@@ -30,7 +32,8 @@ function createMapMarker(long,lat) {
 
 async function run(){
     const vehicleLocation = await getVehiclesCurrentLocation();
-    createMapMarker(vehicleLocation.vehicle[0].longitude, vehicleLocation.vehicle[0].latitude);
+    vehicleLoc = [vehicleLocation.vehicle[0].longitude, vehicleLocation.vehicle[0].latitude)]
+    createMapMarker(vehicleLoc[0],vehicleLoc[1]);
     //const stopInformation    = await getStopInfo('./gtfs/stops.txt');
     //console.log(new Date());
     //console.log("Latitude: " + vehicleLocation.vehicle[0].latitude);
