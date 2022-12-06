@@ -13,13 +13,14 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZnE2NDFwbGYzb
 let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [long, lat],
+    center: [-122.623839, 45.524109],
     zoom: 13,
   });
 
 
 function createMapMarker(long,lat) {
     let marker = new mapboxgl.Marker().setLngLat([long, lat]).addTo(map);
+    map.center = [long, lat];
   }
   
   window.onload = () => {
