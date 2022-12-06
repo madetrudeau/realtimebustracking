@@ -48,7 +48,7 @@ async function getVehiclesCurrentLocation(){
     return json.resultSet;
 }
 
-async function getStopInfo(filename){
+/* async function getStopInfo(filename){
     try{
         const contents = await fs.readFile(filename, 'utf8');
         const contentSplit = contents.split(/\r\n/);
@@ -72,7 +72,7 @@ async function getStopInfo(filename){
     catch(err){
         console.log(err);
     }
-}
+} */
 
 
 window.onload = () => {
