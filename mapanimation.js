@@ -1,6 +1,16 @@
 const appID = "7CBB98B4AE7C7662E47CCD101";
 console.log(appID);
-//const fs = require('fs').promises;
+
+mapboxgl.accessToken = 'pk.eyJ1IjoidGhhdHN0cnVkZWF1IiwiYSI6ImNsYjEyZzF6dDA0NzQzdm56NTBqNDh3NWcifQ.TQjT-zcWNqgaImMMZRNjAQ';
+
+const map = new mapboxgl.Map({
+    container: 'content', // container ID
+    style: 'mapbox://styles/mapbox/streets-v12', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9, // starting zoom
+});
+
+
 
 
 async function run(){
@@ -48,5 +58,7 @@ async function getStopInfo(filename){
         console.log(err);
     }
 }
+
+
 
 run();
