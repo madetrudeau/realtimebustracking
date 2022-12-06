@@ -58,15 +58,14 @@ p {
     color: #50571B;
        
 }
-
 h2 {
     margin-top: 5px;
     margin-left: 13%;
-    margin-right: 250px;
+    margin-right: auto;
     font-family: montserrat, sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 18pt;
+    font-weight: 400;
+    font-size: 14pt;
     color: #50571B;
 }
 
