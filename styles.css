@@ -69,5 +69,7 @@ p {
     position: absolute; 
     top: 300px; 
     bottom: 0; 
+    right: auto;
+    left: auto;
     width: 75%;
   }
