@@ -26,7 +26,7 @@ function createMapMarker(long,lat) {
   
 function updateMapMarker(long, lat) {
     map.setCenter([long,lat]);
-    marker = marker.mapboxgl.Marker().setLngLat([long,lat]).addTo(map);
+    marker = marker.setLngLat([long,lat]);
 }
   
   window.onload = () => {
